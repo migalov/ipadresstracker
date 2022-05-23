@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="page">
+      <h1 class="title">IP Address Tracker</h1>
+      <form class="app" name="app">
+        <fieldset class="app__entry">
+          <input
+            type="text"
+            placeholder="192.212.174.101"
+            name="main_input_ip"
+          />
+          <input class="app__submit" type="submit" value="" />
+        </fieldset>
+        <fieldset class="app__show">
+          {% for input in inputs %}
+          <label for="{{ input.id }}" class="app__show-data">
+            <p class="app__show-data-title">{{ input.title }}</p>
+            <p class="app__show-data-value" name="{{ input.name }}"></p>
+          </label>
+          {% endfor %}
+          {# <div class="message">Don't wrong IP-address!</div> #}
+        </fieldset>
+      </form>
+    </div>
+    <div id="map"></div>
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

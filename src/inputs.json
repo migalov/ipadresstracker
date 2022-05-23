@@ -1,0 +1,6 @@
+[
+  { "title": "IP Adress", "name": "ip_adress" },
+  { "title": "Location", "name": "location" },
+  { "title": "Timezone", "name": "timezone" },
+  { "title": "ISP", "name": "isp" }
+]

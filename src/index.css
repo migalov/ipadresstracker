@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply text-[18px];
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+}
+
+a {
+  @apply text-blue-500 transition-all hover:text-blue-400 hover:underline;
+}
+
+.page {
+  @apply mx-auto flex flex-col bg-[url('./assets/bg-mobile.svg')] bg-cover bg-no-repeat p-6 text-center;
+  height: 100vh;
+}
+
+.title {
+  @apply text-[26px] font-medium leading-[30px] text-white;
+  letter-spacing: -0.232143px;
+}
+
+.app {
+  @apply relative z-[401] mt-[27px]
+  md:block;
+  flex: 0 1 100%;
+}
+
+.app__entry {
+  @apply mx-auto flex max-w-[555px] rounded-[15px];
+}
+
+.app__entry input[type="text"] {
+  @apply w-full rounded-l-[15px] px-6 py-[18px];
+}
+
+.app__entry input[type="submit"] {
+  @apply w-[58px] flex-none rounded-r-[15px] bg-black bg-[url('./assets/enter.svg')] bg-center  bg-no-repeat ease-in duration-200 cursor-pointer;
+}
+
+.app__entry input[type="submit"]:hover {
+  @apply bg-slate-500;
+}
+
+.app__show {
+  @apply relative mx-auto mt-[24px] flex max-w-[1110px] flex-col rounded-[15px] bg-white p-[26px]
+  md:flex-row md:flex-wrap md:justify-between md:px-[24px] md:py-[37px];
+}
+
+.message {
+  @apply absolute top-0 left-0 right-0 flex h-[100%] flex-col justify-center rounded-[15px] bg-[rgba(0,0,0,0.6)] text-white;
+}
+
+.app__show-data {
+  @apply md:w-[50%] lg:w-[calc(25%-48px)];
+}
+
+.app__show-data:not(:first-child) {
+  @apply mt-[21px] md:mt-[0];
+}
+
+.app__show-data,
+.app__show-data:not(:first-child) {
+  @apply lg:mt-[0];
+}
+
+.app__show-data:nth-child(3),
+.app__show-data:nth-child(4) {
+  @apply md:mt-[21px] lg:mt-[0];
+}
+
+.app__show-data-title {
+  @apply text-[10px] font-bold uppercase
+  md:text-left  md:leading-7;
+  letter-spacing: 1.45833px;
+  color: #2c2c2c;
+  opacity: 0.5;
+}
+
+.app__show-data-value {
+  @apply w-full bg-white text-center text-[20px] font-bold
+  md:text-left md:text-[26px] md:leading-[30px];
+}
+
+.app__show-data-value:empty {
+  @apply h-[30px];
+}
+
+#map {
+  @apply h-[calc(100%-300px)]
+  lg:h-[calc(100%-280px)];
+  flex: 0 1 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+}
+
+.full {
+  height: calc(100% - 270px);
+}
+
+.leaflet-control-zoom,
+.leaflet-control-attribution {
+  display: none;
+}
+
+.attribution {
+  background: hsla(0, 0%, 100%, 0.7);
+  padding: 1.5px;
+  position: fixed;
+  bottom: 0;
+  font-size: 11px;
+  z-index: 100;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
