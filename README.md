@@ -1,35 +1,9 @@
-# template-vite-js-tailwind-v3
+# IP Adress Tracker
 
-- **template of:** vite + vanilaJS
-- **tailwindcss:** v3.x
+This application allows you to find the location of the entered address and display it on the map. We also get the provider name and time zone.
 
-## Started
-
-```bash
-yarn
-# or `npm install`
-```
-
----
-
-## Develop
-
-```bash
-yarn dev
-# or `npm run dev`
-```
-
----
-
-## Build
-
-```bash
-yarn build
-# or `npm run build`
-```
-
----
-
-<p align="center">
-<img src="./powered-by-vitawind-bright.png">
-</p>
+## Stack
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
